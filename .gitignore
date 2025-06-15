@@ -1,0 +1,48 @@
+# === Build & Target ===
+target/
+project/target/
+project/project/
+
+# === SBT ===
+.cache/
+.history/
+lib_managed/
+src_managed/
+boot/
+.idea_modules/
+dist/
+logs/
+*.log
+
+# === IntelliJ IDEA ===
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# === VS Code ===
+.vscode/
+
+# === Mac OS ===
+.DS_Store
+
+# === Windows ===
+Thumbs.db
+
+# === Eclipse ===
+.classpath
+.project
+.settings/
+
+# === Temporary files ===
+*.swp
+*.bak
+*.tmp
+*.orig
+
+# === Play ===
+tmp/
+RUNNING_PID
+/.bsp
+.g8/

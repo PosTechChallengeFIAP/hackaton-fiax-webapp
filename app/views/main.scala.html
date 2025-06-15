@@ -1,0 +1,45 @@
+@*
+ * This template is called from the `index` template. This template
+ * handles the rendering of the page header and body tags. It takes
+ * two arguments, a `String` for the title of the page and an `Html`
+ * object to insert into the body of the page.
+ *@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/bootstrap.min.css")">
+        <script src="@routes.Assets.versioned("javascripts/bootstrap.bundle.min.js")"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-custom navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">FIAP X</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8 container" id="main-container">
+                    @* And here's where we render the `Html` object containing
+                    * the page content. *@
+                    @content
+                </div>
+            </div>
+        </div>
+        <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
+    </body>
+</html>
