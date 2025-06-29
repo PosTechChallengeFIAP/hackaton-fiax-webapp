@@ -13,6 +13,7 @@ document.getElementById("uploadForm").addEventListener("submit", function(event)
     .then(data => {
         document.getElementById("error-msg").hidden = true;
         document.getElementById("success-msg").hidden = false;
+        location.reload();
     })
     .catch(error => {
         document.getElementById("error-msg").hidden = false;
